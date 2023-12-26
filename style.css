@@ -4,7 +4,7 @@ body
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    padding-bottom: 1000px;
+    height: 100vh;
 }
 
 header
@@ -21,14 +21,20 @@ header
     border-bottom: 2px solid gray;
 }
 
+.brand
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .brand img
 {
     cursor: pointer;
-    margin-left: 70px;
     height: 40px;
 }
 
-.links a
+.links .post-btn
 {
     appearance: button;
     text-decoration: none;
@@ -44,7 +50,32 @@ header
     
 }
 
-.links a:hover
+.links .post-btn:hover
+{
+    border: 1px solid rgba(0, 0, 0, 0.406);
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+.links .login-btn
+{
+    appearance: button;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #FF5D62;
+    padding: 6px 10px 6px 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: color 0.5s, background-color 0.5s, 
+    box-shadow 0.5s;
+    
+}
+
+.links .login-btn:hover
 {
     border: 1px solid rgba(0, 0, 0, 0.406);
     color: #000000;
@@ -220,3 +251,46 @@ header
     opacity: 84%;
     cursor: pointer;
 }
+
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: antiquewhite;
+    border-top: 2px solid black;
+}
+
+footer h1
+{
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 725px) {
+
+    .links .login-btn
+    {
+        display: none;
+    }
+  }
+
+
+  @media only screen and (max-width: 725px) {
+
+    .s-container
+    {
+        min-width: 400px;
+    }
+
+    .cards-container
+    {
+        justify-content: center;
+    }
+  }
+
